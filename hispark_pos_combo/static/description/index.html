@@ -16,93 +16,105 @@
     .feature-icon { font-size: 2rem; margin-bottom: 15px; }
     .shadow-round { border-radius: 10px; box-shadow: 0 .5rem 1rem rgba(0,0,0,.1); }
 
-    .limited-offer-section {
-      min-height: 180px; /* adjust height of section if you want more space */
-    }
-
-    .limited-offer-banner {
-      background: linear-gradient(135deg, #ffecd2, #fcb69f);
-      color: #333;
-      border: 2px dashed #ff7a59;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      max-width: 500px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .limited-offer-banner:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-    }
-
-    .limited-offer-banner h5 {
-      font-weight: 700;
-      font-size: 1.2rem;
-    }
-
-    .limited-offer-banner p {
-      font-size: 0.95rem;
-      margin-bottom: 0;
-    }
   </style>
 </head>
 <body>
 
-  <!-- ░░ Hero Section ░░ -->
-  <header class="hero text-center">
-    <div class="container">
-      <h1 class="display-5" data-aos="fade-down">POS – Combo & Custom Deal Builder</h1>
-      <p class="lead" data-aos="fade-up">
-        Create flexible combo deals and custom product packs directly from your POS with half‑and‑half options.
-      </p>
-    </div>
-  </header>
-
-    <!-- ░░ Limited Time Offer Section ░░ -->
-    <section class="limited-offer-section d-flex justify-content-center align-items-center my-4" data-aos="zoom-in">
-      <div class="limited-offer-banner px-4 py-3 text-center">
-        <h5 class="mb-1">🎉 Limited Time Offer!</h5>
-        <p class="mb-0">
-          Get this module with an <strong>exclusive discount</strong> for early adopters.
+    <!-- ░░ Hero Section ░░ -->
+    <header style="background:linear-gradient(135deg,#f8f9fa,#e9ecef);padding:60px 0;text-align:center;font-family:'Segoe UI',sans-serif;">
+      <div style="max-width:1200px;margin:0 auto;">
+        <h1 style="font-size:2rem;font-weight:600;margin-bottom:20px;color:#212529;">
+          POS – Combo &amp; Custom Deal Builder
+        </h1>
+        <p style="font-size:1.1rem;line-height:1.5;color:#495057;margin:0 auto;max-width:800px;">
+          Create flexible combo deals and custom product packs directly from your POS with half‑and‑half options.
         </p>
       </div>
+    </header>
+
+    <!-- ░░ Limited Time Offer Section ░░ -->
+    <section
+  style="
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:40px 0;
+    min-height:180px;
+  "
+  data-aos="zoom-in"
+>
+  <div
+    style="
+      background:linear-gradient(135deg,#ffecd2,#fcb69f);
+      color:#333;
+      border:2px dashed #ff7a59;
+      border-radius:12px;
+      box-shadow:0 4px 8px rgba(0,0,0,0.1);
+      max-width:500px;
+      padding:16px 24px;
+      text-align:center;
+      transition:transform 0.2s ease, box-shadow 0.2s ease;
+    "
+    onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 6px 15px rgba(0,0,0,0.15)';"
+    onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)';"
+  >
+    <h5
+      style="
+        font-weight:700;
+        font-size:1.2rem;
+        margin-bottom:8px;
+        font-family:'Segoe UI',sans-serif;
+      "
+    >
+      🎉 Limited Time Offer!
+    </h5>
+    <p
+      style="
+        font-size:0.95rem;
+        margin:0;
+        font-family:'Segoe UI',sans-serif;
+      "
+    >
+      Get this module with an <strong>exclusive discount</strong> for early adopters.
+    </p>
+  </div>
+</section>
+
+    <!-- ░░ Features Section ░░ -->
+    <section class="container my-5">
+        <div class="row text-center" data-aos="fade-up">
+            <div class="col-md-4">
+              <div class="feature-icon text-primary">🍕</div>
+              <h5>Combo Products</h5>
+              <p>Mark products as combos and include fixed items for seamless deal creation.</p>
+            </div>
+            <div class="col-md-4">
+              <div class="feature-icon text-success">🛠️</div>
+              <h5>Custom Combos</h5>
+              <p>Allow customers to build their own deals by selecting items from allowed categories.</p>
+            </div>
+            <div class="col-md-4">
+              <div class="feature-icon text-warning">✨</div>
+              <h5>Half-and-Half Support</h5>
+              <p>Handle special requests like two flavors in one product (e.g., pizzas).</p>
+            </div>
+        </div>
     </section>
 
-  <!-- ░░ Features Section ░░ -->
-  <section class="container my-5">
-    <div class="row text-center" data-aos="fade-up">
-      <div class="col-md-4">
-        <div class="feature-icon text-primary">🍕</div>
-        <h5>Combo Products</h5>
-        <p>Mark products as combos and include fixed items for seamless deal creation.</p>
+    <!-- ░░ Walkthrough Section ░░ -->
+    <section class="container mb-5">
+      <div class="section-title" data-aos="fade-in">
+        <h2>How It Works</h2>
+        <p class="text-muted">Step-by-step process for using the Combo & Custom Deal Builder in POS.</p>
       </div>
-      <div class="col-md-4">
-        <div class="feature-icon text-success">🛠️</div>
-        <h5>Custom Combos</h5>
-        <p>Allow customers to build their own deals by selecting items from allowed categories.</p>
-      </div>
-      <div class="col-md-4">
-        <div class="feature-icon text-warning">✨</div>
-        <h5>Half-and-Half Support</h5>
-        <p>Handle special requests like two flavors in one product (e.g., pizzas).</p>
-      </div>
-    </div>
-  </section>
 
-  <!-- ░░ Walkthrough Section ░░ -->
-  <section class="container mb-5">
-    <div class="section-title" data-aos="fade-in">
-      <h2>How It Works</h2>
-      <p class="text-muted">Step-by-step process for using the Combo & Custom Deal Builder in POS.</p>
-    </div>
-
-    <!-- Step 1 -->
-    <div class="row mb-4 align-items-center" data-aos="fade-up">
-      <div class="col-md-6">
-        <h5>Step 1: Install the Module</h5>
-        <p>Install the “POS – Combo & Custom Deal Builder” from your Odoo Apps.</p>
+      <!-- Step 1 -->
+      <div class="row mb-4 align-items-center" data-aos="fade-up">
+        <div class="col-md-6">
+          <h5>Step 1: Install the Module</h5>
+          <p>Install the “POS – Combo & Custom Deal Builder” from your Odoo Apps.</p>
+        </div>
       </div>
-    </div>
 
     <!-- Step 2 -->
     <div class="row mb-4 align-items-center flex-md-row-reverse" data-aos="fade-up">
@@ -218,65 +230,162 @@
 
   </section>
 
-  <!-- ░░ Multi-Language Support Section ░░ -->
-  <section class="container mb-5">
-    <div class="section-title" data-aos="fade-in">
-      <h2>Multi-Language Support</h2>
-      <p class="text-muted">Fully translatable for global use.</p>
-    </div>
-    <div class="row text-center" data-aos="fade-up">
-      <div class="col-md-3">
-        <div class="feature-icon text-danger">🇫🇷</div>
-        <h5>French (Français)</h5>
-        <p>Prise en charge complète pour les utilisateurs français.</p>
+    <!-- ░░ Multi-Language Support Section ░░ -->
+    <section
+      style="
+        margin-bottom:40px;
+        padding:0 15px;
+        font-family:'Segoe UI',sans-serif;
+      "
+    >
+      <div
+        style="
+          text-align:center;
+          margin-bottom:30px;
+        "
+        data-aos="fade-in"
+      >
+        <h2
+          style="
+            font-size:28px;
+            margin-bottom:10px;
+          "
+        >
+          Multi-Language Support
+        </h2>
+        <p
+          style="
+            color:#6c757d;
+            font-size:16px;
+            margin:0;
+          "
+        >
+          Fully translatable for global use.
+        </p>
       </div>
-      <div class="col-md-3">
-        <div class="feature-icon text-warning">🇪🇸</div>
-        <h5>Spanish (Español)</h5>
-        <p>Soporte disponible para usuarios hispanohablantes.</p>
-      </div>
-      <div class="col-md-3">
-        <div class="feature-icon text-success">🇸🇦</div>
-        <h5>Arabic (العربية)</h5>
-        <p>يدعم اللغة العربية مع عرض مناسب من اليمين إلى اليسار.</p>
-      </div>
-      <div class="col-md-3">
-        <div class="feature-icon text-primary">🇮🇹</div>
-        <h5>Italian (Italiano)</h5>
-        <p>Supporto completo per utenti di lingua italiana.</p>
-      </div>
-    </div>
-  </section>
 
-  <!-- ░░ Our Services Section ░░ -->
-  <section class="container mb-5">
-    <div class="section-title" data-aos="fade-in">
-      <h2>Our Services</h2>
-      <p class="text-muted">We offer complete Odoo solutions.</p>
-    </div>
-    <div class="row text-center" data-aos="fade-up">
-      <div class="col-md-3">
-        <div class="feature-icon text-primary">ℹ️</div>
-        <h5>Odoo Implementation</h5>
-        <p>Complete Odoo setup customized for your business workflows.</p>
+      <div
+        style="
+          display:flex;
+          flex-wrap:wrap;
+          justify-content:center;
+          gap:20px;
+          text-align:center;
+        "
+        data-aos="fade-up"
+      >
+        <!-- French -->
+        <div
+          style="
+            flex:1 1 200px;
+            max-width:220px;
+            min-width:150px;
+          "
+        >
+          <div style="font-size:32px; margin-bottom:10px; color:#dc3545;">🇫🇷</div>
+          <h5 style="margin:0 0 5px; font-size:18px;">French (Français)</h5>
+          <p style="margin:0; font-size:14px;">Prise en charge complète pour les utilisateurs français.</p>
+        </div>
+
+        <!-- Spanish -->
+        <div
+          style="
+            flex:1 1 200px;
+            max-width:220px;
+            min-width:150px;
+          "
+        >
+          <div style="font-size:32px; margin-bottom:10px; color:#ffc107;">🇪🇸</div>
+          <h5 style="margin:0 0 5px; font-size:18px;">Spanish (Español)</h5>
+          <p style="margin:0; font-size:14px;">Soporte disponible para usuarios hispanohablantes.</p>
+        </div>
+
+        <!-- Arabic -->
+        <div
+          style="
+            flex:1 1 200px;
+            max-width:220px;
+            min-width:150px;
+          "
+        >
+          <div style="font-size:32px; margin-bottom:10px; color:#28a745;">🇸🇦</div>
+          <h5 style="margin:0 0 5px; font-size:18px;">Arabic (العربية)</h5>
+          <p style="margin:0; font-size:14px;">يدعم اللغة العربية مع عرض مناسب من اليمين إلى اليسار.</p>
+        </div>
+
+        <!-- Italian -->
+        <div
+          style="
+            flex:1 1 200px;
+            max-width:220px;
+            min-width:150px;
+          "
+        >
+          <div style="font-size:32px; margin-bottom:10px; color:#0d6efd;">🇮🇹</div>
+          <h5 style="margin:0 0 5px; font-size:18px;">Italian (Italiano)</h5>
+          <p style="margin:0; font-size:14px;">Supporto completo per utenti di lingua italiana.</p>
+        </div>
       </div>
-      <div class="col-md-3">
-        <div class="feature-icon text-success">⚙️</div>
-        <h5>Odoo Customization</h5>
-        <p>Custom modules and modifications to suit your exact needs.</p>
+    </section>
+
+    <!-- ░░ Our Services Section ░░ -->
+    <section
+      style="
+        margin-bottom:40px;
+        padding:0 15px;
+        font-family:'Segoe UI',sans-serif;
+      "
+    >
+      <div
+        style="
+          text-align:center;
+          margin-bottom:30px;
+        "
+        data-aos="fade-in"
+      >
+        <h2 style="font-size:28px; margin-bottom:10px;">Our Services</h2>
+        <p style="color:#6c757d; font-size:16px; margin:0;">We offer complete Odoo solutions.</p>
       </div>
-      <div class="col-md-3">
-        <div class="feature-icon text-warning">👥</div>
-        <h5>Support & Maintenance</h5>
-        <p>Get reliable Odoo support and regular maintenance services.</p>
+
+      <div
+        style="
+          display:flex;
+          flex-wrap:wrap;
+          justify-content:center;
+          gap:20px;
+          text-align:center;
+        "
+        data-aos="fade-up"
+      >
+        <!-- Odoo Implementation -->
+        <div style="flex:1 1 200px; max-width:220px; min-width:150px;">
+          <div style="font-size:32px; margin-bottom:10px; color:#0d6efd;">ℹ️</div>
+          <h5 style="margin:0 0 5px; font-size:18px;">Odoo Implementation</h5>
+          <p style="margin:0; font-size:14px;">Complete Odoo setup customized for your business workflows.</p>
+        </div>
+
+        <!-- Odoo Customization -->
+        <div style="flex:1 1 200px; max-width:220px; min-width:150px;">
+          <div style="font-size:32px; margin-bottom:10px; color:#28a745;">⚙️</div>
+          <h5 style="margin:0 0 5px; font-size:18px;">Odoo Customization</h5>
+          <p style="margin:0; font-size:14px;">Custom modules and modifications to suit your exact needs.</p>
+        </div>
+
+        <!-- Support & Maintenance -->
+        <div style="flex:1 1 200px; max-width:220px; min-width:150px;">
+          <div style="font-size:32px; margin-bottom:10px; color:#ffc107;">👥</div>
+          <h5 style="margin:0 0 5px; font-size:18px;">Support & Maintenance</h5>
+          <p style="margin:0; font-size:14px;">Get reliable Odoo support and regular maintenance services.</p>
+        </div>
+
+        <!-- Mobile Apps -->
+        <div style="flex:1 1 200px; max-width:220px; min-width:150px;">
+          <div style="font-size:32px; margin-bottom:10px; color:#17a2b8;">📱</div>
+          <h5 style="margin:0 0 5px; font-size:18px;">Mobile Apps</h5>
+          <p style="margin:0; font-size:14px;">We develop integrated mobile apps tailored for Odoo.</p>
+        </div>
       </div>
-      <div class="col-md-3">
-        <div class="feature-icon text-info">📱</div>
-        <h5>Mobile Apps</h5>
-        <p>We develop integrated mobile apps tailored for Odoo.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
   <!-- ░░ Footer ░░ -->
   <footer class="text-center py-4">
