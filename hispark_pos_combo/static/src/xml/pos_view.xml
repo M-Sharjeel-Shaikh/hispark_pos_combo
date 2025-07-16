@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve"> 
+    <t t-name="OwnComboWidget" owl="1">
+        <style>
+            .pos .modal-dialog .popup {
+                max-width: 80% !important;
+                <!--            margin: 5vh auto; /* Margin from top and bottom */-->
+            }
+            .popup-selection {
+                background-color: #fff9c4;
+                padding: 20px;
+                border-radius: 10px;
+                max-height: 80vh;
+                overflow-y: auto; /* Only inner scroll */
+                box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            }
+            .list-group-item {
+                border-radius: 6px;
+            }
+            .main_product_id {
+                background: #fff;
+                padding: 10px;
+                border: 2px dashed #ccc;
+                border-radius: 8px;
+                margin-bottom: 15px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            }
+            .product-grid {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            .pos_top_product {
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                padding: 10px;
+                text-align: center;
+                background-color: #ffffff;
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+                width: 120px;
+            }
+            .pos_top_product:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            }
+
+            .product-img img {
+                width: 100%;
+                height: 100px;
+                object-fit: cover;
+                border-radius: 6px;
+            }
+
+            .footer {
+                margin-top: 10px;
+            }
+
+            .button.confirm, .button.cancel {
+                border-radius: 4px solid;
+                font-size: 14px;
+                font-weight: 600;
+                cursor: pointer;
+                margin-left: 8px;
+                white-space: nowrap;
+            }
+
+            .button.confirm {
+                background-color: #28a745;
+                color: #fff !important;
+                border: none !important;
+            }
+
+            .button.confirm:hover {
+                background-color: #218838;
+            }
+
+            .button.cancel {
+                background-color: #dc3545;
+                color: #fff !important;
+                border: none !important;
+            }
+
+            .button.cancel:hover {
+                background-color: #c82333;
+            }
+
+            @media (max-width: 480px) {
+                .footer {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                .button.confirm, .button.cancel {
+                    width: 100%;
+                    margin-top: 10px;
+                }
+            }
+        </style>
+
+        <div class="modal-dialog">
+            <div class="popup popup-confirm" style="width:85% !important;">
+                <t t-if="props.data">
+                    <div class="popup popup-selection">
+                        <p class="title">Create Your Own Combo</p>
+                        <div class="main_product_id" t-att-data-product_id="props.main_product">
+                            <div id="tabs">
+                                <ul class="list-group">
+                                    <li class="order-menu list-group-item" style="background: white; width: 100%; min-height: 150px; font-size: 14px; border: 2px solid #ccc;">
+                                        <!-- Mini Order Summary Area -->
+                                        <p class="text-muted text-center">Your Selection Appears Here</p>
+                                    </li>
+                                    <li class="list-group-item" style="background: white; padding: 10px; border: 2px solid #ccc;">
+                                        <div style="float:right;display: contents;;">Total: <span class="total-pricel">0</span></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Loop with heading above product grid -->
+                        <t t-foreach="props.data" t-as="categ" t-key="categ.categ_id">
+                            <h5 class="mt-4 mb-2 text-center text-primary" t-attf-id="a#{categ.categ_id}">
+                                <t t-esc="categ.category" />
+                            </h5>
+                            <div class="product-grid">
+                                <t t-foreach="categ.products" t-as="p" t-key="p.id">
+                                    <div t-on-click="clickProduct">
+                                        <span class='product pos_top_product'
+                                              t-att-data-my="categ.multi_selection"
+                                              t-att-data-product-id="p.id"
+                                              t-att-data-category-id="categ.categ_id">
+                                            <span class="multi_selection" style="color: white;">
+                                                <t t-esc="categ.multi_selection" />
+                                            </span>
+                                            <div class="product-img">
+                                                <img t-attf-src='/web/image?model=product.product&amp;field=image_128&amp;id=#{p.id}' />
+                                                <t t-if="!p.to_weight">
+                                                    <span class="price-tag">
+                                                        <t t-esc="env.pos.format_currency(p.lst_price,'Product Price')" />
+                                                    </span>
+                                                </t>
+                                                <t t-if="p.to_weight">
+                                                    <span class="price-tag">
+                                                        <t t-esc="env.pos.format_currency(p.lst_price,'Product Price')+'/'+env.pos.units_by_id[p.uom_id[0]].name" />
+                                                    </span>
+                                                </t>
+                                            </div>
+                                            <div class="product-name" style="font-size: 12px;">
+                                                <t t-esc="p.display_name" />
+                                            </div>
+                                        </span>
+                                    </div>
+                                </t>
+                            </div>
+                        </t>
+
+                        <!-- Footer Buttons -->
+                        <div class="footer">
+                            <div class="button confirm" t-on-click="confirm">
+                                <t t-esc="props.confirmText" />
+                            </div>
+                            <div class="button cancel" t-on-click="click_cancel">
+                                <t t-esc="props.cancelText" />
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="ComboPack" owl="1">
+        <style type="text/css">
+            <![CDATA[
+                .pos .modal-dialog .popup{
+                    max-width: 80% !important;
+                }
+
+                .combo-title {
+                    font-size: 22px;
+                    font-weight: bold;
+                    margin-bottom: 15px;
+                    color: #333;
+                }
+                .combo_product_id {
+                    border-top: 1px solid #ccc;
+                    padding-top: 15px;
+                }
+                .product_combo_select {
+                    padding: 8px 12px;
+                    border-radius: 4px;
+                    border: 1px solid #ccc;
+                    font-size: 16px;
+                }
+                .button.process_hnh {
+                    background-color: #f0f0f0;
+                    border: 1px solid #ccc;
+                    padding: 6px 10px;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    text-align: center;
+                }
+                .button.process_hnh:hover {
+                    background-color: #e2e2e2;
+                }
+                .product.fix_product {
+                    display: inline-block;
+                    width: 100px;
+                    margin: 10px;
+                    text-align: center;
+                }
+                .product.fix_product .product-img {
+                    border: 1px solid #ddd;
+                    border-radius: 6px;
+                    overflow: hidden;
+                    padding: 5px;
+                    background-color: #fafafa;
+                }
+                .product.fix_product .product-img img {
+                    width: 100%;
+                    border-radius: 4px;
+                }
+                .product.fix_product .price-tag {
+                    background-color: #28a745;
+                    color: white;
+                    padding: 2px 5px;
+                    border-radius: 3px;
+                    font-size: 12px;
+                    position: relative;
+                    top: -10px;
+                }
+
+                .footer {
+                    margin-top: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-top: 1px solid #ccc;
+                    padding-top: 15px;
+                    flex-wrap: wrap;
+                }
+
+                #combo-qty {
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                    font-weight: 600;
+                    font-size: 15px;
+                }
+
+                #combo-qty button {
+                    background-color: #f8f9fa;
+                    border: 1px solid #000000;
+                    padding: 4px 8px;
+                    border-radius: 50px;
+                    cursor: pointer;
+                    font-size: 14px;
+                    transition: background-color 0.2s ease;
+                }
+
+                #combo-qty button:hover {
+                    background-color: #e2e6ea;
+                }
+
+                #combo-qty input {
+                    width: 40px;
+                    text-align: center;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    padding: 4px;
+                    background-color: #fff;
+                    font-weight: bold;
+                }
+
+                .button.confirm, .button.cancel {
+                    border-radius: 4px solid;
+                    font-size: 14px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    margin-left: 8px;
+                    white-space: nowrap;
+                }
+
+                .button.confirm {
+                    background-color: #28a745;
+                    color: #fff !important;
+                    border: none !important;
+                }
+
+                .button.confirm:hover {
+                    background-color: #218838;
+                }
+
+                .button.cancel {
+                    background-color: #dc3545;
+                    color: #fff !important;
+                    border: none !important;
+                }
+
+                .button.cancel:hover {
+                    background-color: #c82333;
+                }
+
+                @media (max-width: 480px) {
+                    .footer {
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+
+                    .button.confirm, .button.cancel {
+                        width: 100%;
+                        margin-top: 10px;
+                    }
+                }
+                .flavour-warning {
+                    color: #dc3545;
+                    font-weight: bold;
+                }
+            ]]>
+        </style>
+
+        <div role="dialog" class="modal-dialog">
+            <div class="popup">
+                <t t-if="props.data">
+                    <div class="popup popup-selection">
+                        <p class="title combo-title"><t t-esc="props.title"/></p>
+                        <div class="scrollable-y touch-scrollable combo_product_id"
+                             t-att-data-product_id="props.main_product">
+                            <table style="width: 100%;">
+                                <tr t-foreach="props.data" t-as="categ" t-key="categ.categ_id">
+                                    <td>
+                                        <span style="font-size: 18px; font-weight: 500;">
+                                            <t t-esc="categ.category"/>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <select id="product_combo_select" class="product_combo_select" t-att-data-qty="categ.qty" required="True">
+                                            <option>Select Your Food....</option>
+                                            <t t-foreach="categ.products" t-as="p" t-key="p.id">
+                                                <t t-if="p">
+                                                    <option t-att-value="p.id"><t t-esc="p.display_name"/></option>
+                                                </t>
+                                            </t>
+                                        </select>
+                                    </td>
+                                    <t t-if="categ.hnh">
+                                        <td>
+                                            <div class="button process_hnh" t-on-click="process_hnh">
+                                                H/H <i class="fa fa-angle-down"></i>
+                                            </div>
+                                        </td>
+                                    </t>
+                                </tr>
+                            </table>
+
+                            <div style="margin-top:20px;font-size: 20px; font-weight: 500;">
+                                Fix Products
+                            </div>
+                            <t t-foreach="props.fix_pack_data" t-as="fix_pro_data" t-key="fix_pro_data.products.id">
+                                <t t-if="fix_pro_data.products.id">
+                                    <span class="product fix_product" t-att-data-product-id="fix_pro_data.products.id">
+                                        <div class="product-img">
+                                            <img t-attf-src='/web/image?model=product.template&amp;field=image_128&amp;id=#{fix_pro_data.products.id}'/>
+                                            <span class="price-tag">
+                                                <t t-esc="fix_pro_data.qty"/>
+                                            </span>
+                                        </div>
+                                        <div class="product-name" style="line-height: 23px !important;">
+                                            <t t-esc="fix_pro_data.products.display_name"/>
+                                        </div>
+                                    </span>
+                                </t>
+                            </t>
+                        </div>
+
+                        <small class="flavour-warning" style="display: none;">
+                            Please flavour first! then confirm.
+                        </small>
+
+                        <div id="combo-qty">
+                            Qty:
+                            <button type="button" id="minus" class="minus" t-on-click="minus_qty">
+                                <i class="fa fa-minus"></i>
+                            </button>
+                            <input type="number" id="1" value="1" min="1" disabled="1" />
+                            <button type="button" id="add_qty" class="add_qty" t-on-click="add_qty">
+                                <i class="fa fa-plus"></i>
+                            </button>
+                        </div>
+
+                        <div class="footer">
+                            <div class="d-flex align-items-center">
+                                <div class="button confirm" t-on-click="confirm">
+                                    <t t-esc="props.confirmText" />
+                                </div>
+                                <div class="button cancel" t-on-click="cancel">
+                                    <t t-esc="props.cancelText" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </div>
+        </div>
+    </t>
+
+    <t t-inherit="point_of_sale.ProductItem" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('product-img')]" position="inside">
+            <t t-if="props.product.is_pack">
+                <div class="product_pack">
+                   Combo Pack
+                </div>
+            </t>
+            <t t-if="props.product.is_extra">
+                <div class="product_extra">
+                   Make my Own
+               </div>
+            </t>
+        </xpath>
+    </t>
+
+    <t t-inherit="point_of_sale.Orderline" t-inherit-mode="extension" owl="1">
+        <xpath expr="//ul[@class='info-list']/t" position="after">
+            <t t-if="props.line.get_product().is_pack">
+                <i style="color: green; font-size:13px;">
+                    <t t-if="props.line.pack_data">
+                        <t t-foreach="props.line.pack_data" t-as="pos_pack" t-key="pos_pack_index">
+                            <div>
+                               &#187; <t t-esc="pos_pack.product_id.display_name"/>
+                                :-
+                                <t t-esc="pos_pack.qty * props.line.quantity"/>
+                            </div>
+                        </t>
+                    </t>
+                </i>
+            </t>
+            <t t-if="props.line.get_product().is_extra">
+                <i style="color: green; font-size:13px;">
+                    <t t-if="props.line.order_menu">
+                        <t t-foreach="props.line.order_menu" t-as="order_menu" t-key="order_menu_index">
+                            <div>&#187;
+                                <t t-esc="order_menu.categoryName"/>
+                            </div>
+                            <t t-foreach="order_menu.products" t-as="product" t-key="product.id">
+                                <div style="margin-left: 15px;">&#187;
+                                    <t t-esc="product.product_name"/>
+                                    :-
+                                    <t t-esc="props.line.quantity"/>
+                                </div>
+                            </t>
+                        </t>
+                    </t>
+                </i>
+            </t>
+        </xpath>
+    </t>
+</templates>

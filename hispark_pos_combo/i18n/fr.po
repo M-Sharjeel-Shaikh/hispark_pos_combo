@@ -1,0 +1,403 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hispark_pos_combo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0-20240710\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-15 20:52+0000\n"
+"PO-Revision-Date: 2025-07-15 20:52+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hispark_pos_combo
+#. odoo-javascript
+#: code:addons/hispark_pos_combo/static/src/js/combo_screen.js:0
+#: code:addons/hispark_pos_combo/static/src/js/pos_product_pack_file.js:0
+#, python-format
+msgid "Cancel"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_product_extra_topping__product_categ_id
+msgid "Category"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.ui.menu,name:hispark_pos_combo.menu_combo_fixed_product
+msgid "Combo Fixed Product"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_pos_order_line__combo_ids
+msgid "Combo Lines"
+msgstr ""
+
+#. module: hispark_pos_combo
+#. odoo-javascript
+#: code:addons/hispark_pos_combo/static/src/xml/pos_view.xml:0
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_product_product__is_pack
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_product_template__is_pack
+#, python-format
+msgid "Combo Pack"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.ui.menu,name:hispark_pos_combo.menu_combo_selective_product
+msgid "Combo Selective Product"
+msgstr ""
+
+#. module: hispark_pos_combo
+#. odoo-javascript
+#: code:addons/hispark_pos_combo/static/src/xml/pos_view.xml:0
+#, python-format
+msgid "Create Your Own Combo"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_fix_product_pack__create_uid
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_pos_order_line_combo__create_uid
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_pos_order_line_own__create_uid
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_product_extra_topping__create_uid
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_product_pack__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_fix_product_pack__create_date
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_pos_order_line_combo__create_date
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_pos_order_line_own__create_date
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_product_extra_topping__create_date
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_product_pack__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_pos_order_line_combo__tax_ids
+msgid "Default Taxes"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_fix_product_pack__display_name
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_pos_order_line_combo__display_name
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_pos_order_line_own__display_name
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_product_extra_topping__display_name
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_product_pack__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_pos_order_line__own_ids
+msgid "Extra Toppings"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_pos_order__finalized_order
+msgid "Finalized"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_product_product__product_fix_pro_ids
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_product_template__product_fix_pro_ids
+msgid "Fix Pack Product"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model,name:hispark_pos_combo.model_fix_product_pack
+msgid "Fix Product Pack"
+msgstr ""
+
+#. module: hispark_pos_combo
+#. odoo-javascript
+#: code:addons/hispark_pos_combo/static/src/xml/pos_view.xml:0
+#, python-format
+msgid "Fix Products"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model_terms:ir.ui.view,arch_db:hispark_pos_combo.product_template_form_view_combo
+msgid "Fix product pack"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model_terms:ir.ui.view,arch_db:hispark_pos_combo.combo_fixed_tree_view
+msgid "Fixed Products"
+msgstr ""
+
+#. module: hispark_pos_combo
+#. odoo-javascript
+#: code:addons/hispark_pos_combo/static/src/xml/pos_view.xml:0
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_product_pack__hnh
+#, python-format
+msgid "H/H"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_fix_product_pack__id
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_pos_order_line_combo__id
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_pos_order_line_own__id
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_product_extra_topping__id
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_product_pack__id
+msgid "ID"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_pos_order_line__is_pack
+msgid "Is Combo Pack"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_pos_order_line__is_extra
+msgid "Is Extra"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_fix_product_pack__product_template_id
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_pos_order_line_combo__product_id
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_pos_order_line_own__product_id
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_product_extra_topping__product_template_id
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_product_pack__product_template_id
+msgid "Item"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_product_product__product_pack_id
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_product_template__product_pack_id
+msgid "Items in the pack"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_fix_product_pack____last_update
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_pos_order_line_combo____last_update
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_pos_order_line_own____last_update
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_product_extra_topping____last_update
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_product_pack____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_fix_product_pack__write_uid
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_pos_order_line_combo__write_uid
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_pos_order_line_own__write_uid
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_product_extra_topping__write_uid
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_product_pack__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_fix_product_pack__write_date
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_pos_order_line_combo__write_date
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_pos_order_line_own__write_date
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_product_extra_topping__write_date
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_product_pack__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_product_product__is_extra
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_product_template__is_extra
+msgid "Make Own"
+msgstr ""
+
+#. module: hispark_pos_combo
+#. odoo-javascript
+#: code:addons/hispark_pos_combo/static/src/xml/pos_view.xml:0
+#, python-format
+msgid "Make my Own"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model_terms:ir.ui.view,arch_db:hispark_pos_combo.product_template_form_view_topping
+msgid "Make your own"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_product_extra_topping__multi_selection
+msgid "Multiple Selection"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_pos_order_line_combo__name
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_pos_order_line_own__name
+msgid "Name"
+msgstr ""
+
+#. module: hispark_pos_combo
+#. odoo-javascript
+#: code:addons/hispark_pos_combo/static/src/js/combo_screen.js:0
+#: code:addons/hispark_pos_combo/static/src/js/pos_product_pack_file.js:0
+#, python-format
+msgid "Ok"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.actions.act_window,name:hispark_pos_combo.product_combo_fixed_action
+msgid "POS Combo Fixed Product"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.actions.act_window,name:hispark_pos_combo.product_combo_selective_action
+msgid "POS Combo Selective Product"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_pos_order_line_combo__line_id
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_pos_order_line_own__orderline_id
+msgid "POS Line"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:res.groups,name:hispark_pos_combo.group_only_pos_user
+msgid "POS User Only"
+msgstr ""
+
+#. module: hispark_pos_combo
+#. odoo-javascript
+#: code:addons/hispark_pos_combo/static/src/xml/pos_view.xml:0
+#, python-format
+msgid "Please flavour first! then confirm."
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model,name:hispark_pos_combo.model_pos_order_line
+msgid "Point of Sale Order Lines"
+msgstr "Lignes des commandes du point de vente"
+
+#. module: hispark_pos_combo
+#: model:ir.model,name:hispark_pos_combo.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Commandes du point de vente"
+
+#. module: hispark_pos_combo
+#: model:ir.model,name:hispark_pos_combo.model_pos_session
+msgid "Point of Sale Session"
+msgstr "Session du point de vente"
+
+#. module: hispark_pos_combo
+#: model:ir.model,name:hispark_pos_combo.model_pos_order_line_combo
+msgid "Pos Order Line Combo"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model,name:hispark_pos_combo.model_pos_order_line_own
+msgid "Pos Order Live Make Own"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_pos_order_line_own__price
+msgid "Price"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model,name:hispark_pos_combo.model_product_template
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_fix_product_pack__product_p_id
+msgid "Product"
+msgstr "Produit"
+
+#. module: hispark_pos_combo
+#: model:ir.model,name:hispark_pos_combo.model_product_extra_topping
+msgid "Product Extra Toppings"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_product_product__product_extra_id
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_product_template__product_extra_id
+msgid "Product Toppings"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model,name:hispark_pos_combo.model_product_pack
+msgid "Product packs"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_product_pack__product_categ_id
+msgid "Products"
+msgstr ""
+
+#. module: hispark_pos_combo
+#. odoo-javascript
+#: code:addons/hispark_pos_combo/static/src/xml/pos_view.xml:0
+#, python-format
+msgid "Qty:"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_fix_product_pack__product_quantity
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_pos_order_line_combo__qty
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_pos_order_line_own__qty
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_product_pack__product_quantity
+msgid "Quantity"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_product_pack__required_item
+msgid "Required"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_product_pack__product_selection
+msgid "Select Multiple Related Products"
+msgstr ""
+
+#. module: hispark_pos_combo
+#. odoo-javascript
+#: code:addons/hispark_pos_combo/static/src/xml/pos_view.xml:0
+#, python-format
+msgid "Select Your Food...."
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model_terms:ir.ui.view,arch_db:hispark_pos_combo.combo_selective_tree_view
+msgid "Selective Products"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model_terms:ir.ui.view,arch_db:hispark_pos_combo.product_template_form_view_combo
+msgid "Selective product pack"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model.fields,help:hispark_pos_combo.field_product_pack__hnh
+msgid "Sometimes, customers request a half-and-half option for their order."
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_pos_order_line_combo__price_subtotal_incl
+msgid "Subtotal"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model.fields,field_description:hispark_pos_combo.field_pos_order_line_combo__price_subtotal
+msgid "Subtotal w/o Tax"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model_terms:ir.ui.view,arch_db:hispark_pos_combo.product_template_form_view_topping
+msgid "Taxes"
+msgstr ""
+
+#. module: hispark_pos_combo
+#: model:ir.model.fields,help:hispark_pos_combo.field_product_product__is_extra
+#: model:ir.model.fields,help:hispark_pos_combo.field_product_template__is_extra
+msgid "This will use for "
+msgstr ""
+
+#. module: hispark_pos_combo
+#. odoo-javascript
+#: code:addons/hispark_pos_combo/static/src/xml/pos_view.xml:0
+#, python-format
+msgid "Total:"
+msgstr ""
+
+#. module: hispark_pos_combo
+#. odoo-javascript
+#: code:addons/hispark_pos_combo/static/src/xml/pos_view.xml:0
+#, python-format
+msgid "Your Selection Appears Here"
+msgstr ""
